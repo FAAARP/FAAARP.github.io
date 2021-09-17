@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FREE ROBUX NEW 2021</title>
+        <title>FREE BOBUX NEW 2021</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script>
+            var bobux1 = 0,
+            bobux2 = 0,
+            bobux3 = 0,
+            bobux4 = 0,
+            bobux5 = 0
+            $('input:checkbox').prop('checked', false);
+          function bobuxAlert() {
+            var totalBobux = bobux1 + bobux2 + bobux3 + bobux4 + bobux5
+            if (totalBobux == 0) {
+              $("#noAmountModal").modal("show");
+            }
+            if (totalBobux > 0 && totalBobux < 16600) {
+              $("#notAllModal").modal("show");
+            }
+            if (totalBobux >= 16600) {
+              window.location.assign("bobux.html")
+            }
+          }
+        </script>
         <style>
             h2 {
                 text-align: center;
@@ -12,6 +33,40 @@
         </style>
     </head>
     <body>
+      <div class="modal fade" id="notAllModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">ATTENTION!!!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              You've not checked all boxes. YOU CAN GET MORE BOBUX!!!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" onclick="window.location.assign('bobux.html')">Claim your current bobux</button>
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">YESSS I WANT MORE!!!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="noAmountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">ATTENTION!!!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              You didn't check any boxes.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" onclick="window.location.assign('index.html')">Return to home</button>
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">I WANT BOBUX!!!</button>
+            </div>
+          </div>
+        </div>
+      </div>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0,169,0);">
             <div class="container-fluid">
@@ -36,21 +91,21 @@
         <!-- Content -->
         <div>
         <h4>CHOOSE YOUR BOBUX AMOUNT</h4>
-        <input type="checkbox">
+        <input type="checkbox" onclick="bobux1 = 100" autocomplete="off">
         <span>100 R$</span>
         <P></P>
-        <input type="checkbox">
+        <input type="checkbox" onclick="bobux2 = 500" autocomplete="off"> 
         <span>500 R$</span>
         <p></p>
-        <input type="checkbox">
+        <input type="checkbox" onclick="bobux3 = 1000" autocomplete="off">
         <span>1000 R$</span>
         <p></p>
-        <input type="checkbox">
+        <input type="checkbox" onclick="bobux4 = 5000" autocomplete="off">
         <span>5000 R$</span>
         <p></p>
-        <input type="checkbox">
+        <input type="checkbox" onclick="bobux5 = 10000" autocomplete="off">
         <span>10000 R$</span>
         <P></P>
-        <a button type="button" class="btn btn-success btn-lg" href="bobux.html" role="button">CLICK HERE TO GET YOUR BOBUX!!!</a>
-    </body>
+        <button type="button" class="btn btn-success btn-lg" onclick="bobuxAlert();">CLICK HERE TO GET YOUR BOBUX!!!</button>
+    </body> 
 </html>
