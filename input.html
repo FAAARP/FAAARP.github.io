@@ -25,6 +25,56 @@
               window.location.assign("bobux.html")
             }
           }
+          function calc1() {
+            var check1Object = document.getElementById("check1")
+            stat1 = check1Object.checked;
+            if (stat1 == true) {
+              bobux1 = 100;
+            }
+            else {
+              bobux1 = 0;
+            }
+          }
+          function calc2() {
+            var check2Object = document.getElementById("check2")
+            stat2 = check2Object.checked;
+            if (stat2 == true) {
+              bobux2 = 500;
+            }
+            else {
+              bobux2 = 0;
+            }
+          }
+          function calc3() {
+            var check3Object = document.getElementById("check3")
+            stat3 = check3Object.checked;
+            if (stat3 == true) {
+              bobux3 = 1000;
+            }
+            else {
+              bobux3 = 0;
+            }
+          }
+          function calc4() {
+            var check4Object = document.getElementById("check4")
+            stat4 = check4Object.checked;
+            if (stat4 == true) {
+              bobux4 = 5000;
+            }
+            else {
+              bobux4 = 0;
+            }
+          }
+          function calc5() {
+            var check5Object = document.getElementById("check5")
+            stat5 = check5Object.checked;
+            if (stat5 == true) {
+              bobux5 = 10000;
+            }
+            else {
+              bobux5 = 0;
+            }
+          }
         </script>
         <style>
             h2 {
@@ -91,21 +141,28 @@
         <!-- Content -->
         <div>
         <h4>CHOOSE YOUR BOBUX AMOUNT</h4>
-        <input type="checkbox" onclick="bobux1 = 100" autocomplete="off">
-        <span>100 R$</span>
-        <P></P>
-        <input type="checkbox" onclick="bobux2 = 500" autocomplete="off"> 
-        <span>500 R$</span>
-        <p></p>
-        <input type="checkbox" onclick="bobux3 = 1000" autocomplete="off">
-        <span>1000 R$</span>
-        <p></p>
-        <input type="checkbox" onclick="bobux4 = 5000" autocomplete="off">
-        <span>5000 R$</span>
-        <p></p>
-        <input type="checkbox" onclick="bobux5 = 10000" autocomplete="off">
-        <span>10000 R$</span>
-        <P></P>
-        <button type="button" class="btn btn-success btn-lg" onclick="bobuxAlert();">CLICK HERE TO GET YOUR BOBUX!!!</button>
+        <form>
+          <label for="check1">
+            <input type="checkbox" id="check1" name="bobux" onclick="calc1();" autocomplete="off"> 100R$
+          </label>
+          <p></p>
+          <label for="check2">
+            <input type="checkbox" id="check2" name="bobux" onclick="calc2();" autocomplete="off"> 500R$
+          </label>
+          <p></p>
+          <label for="check3">
+            <input type="checkbox" id="check3" name="bobux" onclick="calc3();" autocomplete="off"> 1000R$
+          </label>
+          <p></p>
+          <label for="check4">
+            <input type="checkbox" id="check4" name="bobux" onclick="calc4();" autocomplete="off"> 5000R$
+          </label>
+          <p></p>
+          <label for="check5">
+            <input type="checkbox" id="check5" name="bobux" onclick="calc5();" autocomplete="off"> 10000R$
+          </label>
+          <p></p>
+          <button type="button" class="btn btn-success btn-lg" onclick="bobuxAlert();">CLICK HERE TO GET YOUR BOBUX!!!</button>
+      </form>
     </body> 
 </html>
